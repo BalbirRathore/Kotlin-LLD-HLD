@@ -3,12 +3,12 @@ package org.example.solid
 
 // Open for extension and close for modification
 // Violate open close principle
-data class InvoiceDao1(val invoice: Invoice){
-    fun saveToDB(){
+class InvoiceDao1{
+    fun saveToDB(invoice: Invoice){
         /// Save into the DB
     }
 
-    fun saveToFile(){
+    fun saveToFile(invoice: Invoice){
         //save into file
     }
 }
@@ -18,15 +18,14 @@ data class InvoiceDao1(val invoice: Invoice){
 interface InvoiceDaoInterface {
     fun save(invoice: Invoice)
 }
-
-data class DatabaseInvoiceDao(val invoice: Invoice) : InvoiceDaoInterface {
+ class DatabaseInvoiceDao : InvoiceDaoInterface {
     override fun save(invoice: Invoice) {
         // save to DB
     }
 }
 
 
-data class FileInvoiceDao(val invoice: Invoice) : InvoiceDaoInterface {
+class FileInvoiceDao : InvoiceDaoInterface {
     override fun save(invoice: Invoice) {
         // save to File
     }

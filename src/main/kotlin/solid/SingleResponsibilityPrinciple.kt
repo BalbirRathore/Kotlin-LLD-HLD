@@ -30,16 +30,15 @@ data class Invoice(val marker: Marker, val quality: Int){
         return price
     }
 }
-
-data class InvoiceDao(val invoice: Invoice){
-    fun saveToDB(){
+ class InvoiceDao{
+    fun saveToDB(invoice: Invoice){
         /// Save into the DB
     }
 }
 
-data class InvoicePrinter(val invoice: Invoice){
+class InvoicePrinter {
 
-    fun printInvoice(){
+    fun printInvoice(invoice: Invoice){
         // print invoice
     }
 }
