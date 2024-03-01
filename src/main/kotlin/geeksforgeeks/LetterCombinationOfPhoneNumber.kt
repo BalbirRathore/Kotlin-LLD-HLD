@@ -3,7 +3,7 @@ package org.example.geeksforgeeks
 import java.util.*
 
 
-internal object GFG {
+internal class LetterCombinationOfPhoneNumber {
     // Function to return a vector that contains
     // all the generated letter combinations
     private fun letterCombinationsUtil(digits: String, n: Int,
@@ -49,13 +49,18 @@ internal object GFG {
     }
 
     // Driver code
-    @JvmStatic
-    fun main(args: Array<String>) {
-        //val number = intArrayOf(2, 3)
-        //val n = number.size
-        val digits = "23"
-        val n1 = digits.length
-        // Function call
-        letterCombinations(digits, n1);
+    companion object {
+        @JvmStatic
+        fun main(args: Array<String>) {
+            val letterCombinationOfPhoneNumber = LetterCombinationOfPhoneNumber()
+            //val number = intArrayOf(2, 3)
+            //val n = number.size
+            val digits = "23"
+            val n1 = digits.length
+            // Function call
+            letterCombinationOfPhoneNumber.letterCombinations(digits, n1);
+        }
     }
 }
+
+
