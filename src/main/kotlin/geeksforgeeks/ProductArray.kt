@@ -4,56 +4,6 @@ package org.example.geeksforgeeks
 internal class ProductArray {
     /* Function to print product array
     for a given array arr[] of size n */
-    fun productArray1(arr: IntArray, n: Int) {
-        // Base case
-        if (n == 1) {
-            return
-        }
-        // Initialize memory to all arrays
-        val left = IntArray(n)
-        val right = IntArray(n)
-        val prod = IntArray(n)
-
-        /* Left most element of left array is always 1 */
-        left[0] = 1
-        /* Right most element of right array is always 1 */
-        right[n - 1] = 1
-        // 1, 10, 30, 150, 900,
-        /* Construct the left array */
-        var i = 1
-        while (i < n) {
-            left[i] = arr[i - 1] * left[i - 1]
-            print("${left[i]}, ")
-            i++
-            //print(prod[i].toString() + " ")
-        }
-
-        /* Construct the right array */
-        var j = n - 2
-        println()
-        while (j >= 0) {
-            right[j] = arr[j + 1] * right[j + 1]
-            print("${right[j]}, ")
-            j--
-        }
-
-        /* Construct the product array using
-        left[] and right[] */
-        i = 0
-        while (i < n) {
-            prod[i] = left[i] * right[i]
-            i++
-        }
-
-        /* print the constructed prod array */
-        i = 0
-        while (i < n) {
-            print(prod[i].toString() + " ")
-            i++
-        }
-        return
-    }
-
 
     fun productArray(arr: IntArray, n: Int) {
         // Base case
