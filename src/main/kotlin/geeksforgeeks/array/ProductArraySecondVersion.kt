@@ -1,4 +1,4 @@
-package org.example.geeksforgeeks
+package org.example.geeksforgeeks.array
 
 class ProductArraySecondVersion {
 
@@ -11,15 +11,17 @@ class ProductArraySecondVersion {
         if (n == 1) {
             return
         }
-        /* Allocate memory for the product array
-           Initialize the product array as 1
-           */
+
 
     /*    val generatedStringArray = Array(10) { i -> i*i  }
         for(element in generatedStringArray)
         print("$element,")
         println()*/
 
+        /*
+         Allocate memory for the product array
+         Initialize the product array as 1
+         */
         val productArray = IntArray(n) { 1 }
         //for (j in 0 until n) productArray[j] = 1
 

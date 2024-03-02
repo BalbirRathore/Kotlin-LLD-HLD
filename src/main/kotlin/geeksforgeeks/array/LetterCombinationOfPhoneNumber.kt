@@ -1,4 +1,4 @@
-package org.example.geeksforgeeks
+package org.example.geeksforgeeks.array
 
 import java.util.*
 
