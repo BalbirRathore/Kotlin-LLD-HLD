@@ -1,5 +1,8 @@
 package org.example.geeksforgeeks.array
 
+import kotlin.math.max
+import kotlin.math.min
+
 fun main(args: Array<String>) {
     val array = intArrayOf(12, 1234, 45, 67, 1)
     //val array = intArrayOf(12)
@@ -28,8 +31,8 @@ fun findMinMax(array: IntArray): IntArray {
         return minMaxArray
     }
     for (i in 1 until array.size) {
-        minMaxArray[0] = Math.min(minMaxArray[0], array[i])
-        minMaxArray[1] = Math.max(minMaxArray[1], array[i])
+        minMaxArray[0] = min(minMaxArray[0], array[i])
+        minMaxArray[1] = max(minMaxArray[1], array[i])
     }
     return minMaxArray
 }

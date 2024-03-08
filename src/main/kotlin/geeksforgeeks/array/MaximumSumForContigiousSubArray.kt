@@ -8,6 +8,7 @@ fun main(args: Array<String>) {
     println("maxSumOfContiguousSubArray==$maxSumOfContiguousSubArray")
 }
 
+// Kadane's Algorithm
 fun findMaxSumOfContiguousSubArray(array: IntArray): Int {
        var sum = 0
        var maxi = array[0]
